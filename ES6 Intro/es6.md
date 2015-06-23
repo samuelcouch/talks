@@ -353,4 +353,4 @@ module.exports = require('./lib');
 ---
 ## Contact
 ## Sam Couch
-### @SamuelCouch (Twitter/GitHub)
+### @SamuelCouch
