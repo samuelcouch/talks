@@ -2,16 +2,17 @@
 ### A look into the future of JavaScript
 
 ---
-# Sam Couch
-### Software Engineer
-### www.samcouch.com
+#Sam Couch
+###Software Engineer
+###@SamuelCouch
+####www.samcouch.com
 
 ---
 
 # What's an ES6?
 ### Also known as `ECMAScript 6`...
 
-> ECMAScript is the "proper" name for the language commonly referred to as JavaScript
+*ECMAScript is the "proper" name for the language commonly referred to as JavaScript*
 
 ---
 ##OK, cool. So what?
@@ -21,7 +22,7 @@
 
 ---
 ## What's new?
-- `let`
+- `let` keyword
 - Classes 
 - Arrow Functions
 - Modules
@@ -29,7 +30,9 @@
 - Rest Parameters
 - Function Generators
 
-...And **MANY** more...
+---
+##That's not everything,
+###But it's a good start!
 
 ---
 # Let's get into it!
@@ -37,19 +40,20 @@
 ---
 ## `let`
 Typically in JavaScript we're used to 
+<br />
 
 ```javascript
 var myVar = 'variable';
 ```
-
-### ES6 gives us enhanced scoping  capabilities with variables with the use of the `let` keyword.
+<br />
+ES6 gives us enhanced scoping  capabilities with variables with the use of the __let__ keyword.
 
 ---
 ## `let` vs. `var`
 
-####`var` is scoped to the nearest function block (Or global if declared outside of a function)
-
-####`let` is scoped to the nearest enclosing block (Or global is declared outside of any block)
+`var` is scoped to the nearest __function__ block (Or global if declared outside of a function)
+<br />
+`let` is scoped to the nearest __enclosing__ block (Or global is declared outside of any block)
 
 ---
 ##Gibberish... What's that even mean?
@@ -67,7 +71,7 @@ function simpleSampleFunctionBlock() {
 };
 ```
 
-#### These samples are all the same, nothing particularly new
+__These samples are all the same, nothing particularly new__
 
 ---
 ## `let` vs. `var`
@@ -95,7 +99,7 @@ Outdated.prototype.getLameThing = function(){
 }
 ```
 
-### This isn't awful, but it could be prettier.
+__This isn't awful, but it could be prettier.__
 
 ---
 ##Classes
@@ -111,7 +115,7 @@ class Modern {
 }
 ```
 
-### Now that's more like it!
+__Now that's more like it!__
 
 ---
 ##Arrow Functions
@@ -126,7 +130,7 @@ app.get('/es6', (req, res) => {
 });
 ```
 
-### That may not seem all too useful, but it get's better.
+__That may not seem all too useful, but it get's better.__
 
 ---
 ##Arrow Functions
@@ -137,7 +141,7 @@ var squares = numbers.map((num) => num*num);
 console.log(squares); // [4, 16, 36, 64, 100] 
 ```
 
-### Single line expressions are pretty rad I think!
+__Single line expressions are pretty rad I think!__
 
 ---
 ## Modules
@@ -187,8 +191,14 @@ var utils = {
 
 export default utils;
 ```
-### You can now say: `import utils from 'utils'` in your `app.js`
-#### To use, you would say: `utils.multiply(2, 2)`
+
+And now...
+
+```javascript
+//app.js
+import utils from 'utils'
+console.log(utils.mutiply(2, 2)); //4
+```
 
 ---
 ##Promises
@@ -223,7 +233,7 @@ ourPromise.then(function(result) {
 ---
 ##Promises
 
-A "promisified" function is considered `then`able. Which is to say, it has access to the `then` method.
+A "promisified" function is considered __thenable__. Which is to say, it has access to the __then__ method.
 
 ```javascript
 Promise.then = (resolve, reject) => {
@@ -250,7 +260,7 @@ function getNames(){
 }
 ```
 
-#### You have to convert your arguments to an array before you can do anything with it.
+You have to convert your arguments to an array before you can do anything with it.
 
 ---
 ##Rest Parameters
@@ -270,9 +280,9 @@ function getNames(...names){
 ##Function Generators[^1]
 Generators are *most* ideal for defining sequences of undetermined lengths. 
 
-### A generator requires one (or more) `yield` expressions
+__A generator requires one (or more) `yield` expressions__
 
-Uses the notation of `function* thing()` 
+Uses the notation of __function* thing()__ 
 
 [^1]: Function generators aren't **fully** supported yet, but it's getting there!
 
@@ -310,7 +320,7 @@ To get started with ES6 **today** we have to rely on other tools in order to tak
 
 ---
 #Compilers
-###### It's plural, but there's really only one that I'll recommend.
+#### (It's plural, but there's really only one that I'm recommending)
 
 ---
 #Babel.js
@@ -322,9 +332,9 @@ To get started with ES6 **today** we have to rely on other tools in order to tak
 
 ---
 ##Using Babel
-The easiest way (in my opinion) is to use the `require` hook
+The easiest way (in my opinion) is to use the __require__ hook
 
-`npm install babel`
+__npm install babel__
 
 ```javascript
 //index.js
@@ -341,8 +351,8 @@ require("babel/register");
 module.exports = require('./lib');
 ```
 
-1. You have a `lib` directory which contains your ES6-ified app
-1. You run your app via `node index.js`
+1. You have a __lib__ directory which contains your ES6-ified app
+1. You run your app via __node index.js__
 
 ---
 ##More Resources
