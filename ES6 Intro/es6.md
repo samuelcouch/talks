@@ -88,6 +88,22 @@ for(var j = 0; j < 10; j++){
 ```
 
 ---
+## `let` vs. `var`
+__One distinction to note:__
+
+```javascript
+for(let i = 0; i < 10; i++){
+  // `i` is ONLY  visible here (0..9)
+}
+
+let j; // `j` is visible here (undefined)
+for(j = 0; j < 10; j++){
+  // `j` is visible here (0..9)
+}
+// `j` is also visible here (10)
+```
+
+---
 ## Classes
 
 ```javascript
