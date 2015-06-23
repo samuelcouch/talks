@@ -21,6 +21,7 @@
 
 ---
 ## What's new?
+- `let`
 - Classes 
 - Arrow Functions
 - Modules
@@ -32,6 +33,55 @@
 
 ---
 # Let's get into it!
+
+---
+## `let`
+Typically in JavaScript we're used to 
+
+```javascript
+var myVar = 'variable';
+```
+
+### ES6 gives us enhanced scoping  capabilities with variables with the use of the `let` keyword.
+
+---
+## `let` vs. `var`
+
+####`var` is scoped to the nearest function block (Or global if declared outside of a function)
+
+####`let` is scoped to the nearest enclosing block (Or global is declared outside of any block)
+
+---
+##Gibberish... What's that even mean?
+
+---
+## `let` vs. `var`
+```javascript
+let dog = 'good'; //globally scoped
+var cat = 'bad'; //globally scoped
+```
+```javascript
+function simpleSampleFunctionBlock() {
+    let kobe = 'GOAT'; //function block scoped
+    var lebron = 'NOT GOAT'; //function block scoped
+};
+```
+
+#### These samples are all the same, nothing particularly new
+
+---
+## `let` vs. `var`
+
+```javascript
+for(let i = 0; i < 10; i++){
+  // `i` is ONLY  visible here
+}
+
+for(var j = 0; j < 10; j++){
+  // `j` is visible here
+}
+// `j` is ALSO visible here
+```
 
 ---
 ## Classes
@@ -137,8 +187,8 @@ var utils = {
 
 export default utils;
 ```
-### You can now `import utils from 'utils'` in your `app.js`
-#### To use you would say `utils.multiply(2, 2)`
+### You can now say: `import utils from 'utils'` in your `app.js`
+#### To use, you would say: `utils.multiply(2, 2)`
 
 ---
 ##Promises
@@ -217,12 +267,14 @@ function getNames(...names){
 ### Ain't that fancy!?
 
 ---
-##Function Generators
+##Function Generators[^1]
 Generators are *most* ideal for defining sequences of undetermined lengths. 
 
 ### A generator requires one (or more) `yield` expressions
 
 Uses the notation of `function* thing()` 
+
+[^1]: Function generators aren't **fully** supported yet, but it's getting there!
 
 ---
 ##Function Generators
