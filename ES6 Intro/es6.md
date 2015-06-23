@@ -9,8 +9,7 @@
 ---
 
 # What's an ES6?
-<br />
-# Also known as `ECMAScript 6`...
+### Also known as `ECMAScript 6`...
 
 > ECMAScript is the "proper" name for the language commonly referred to as JavaScript
 
