@@ -351,6 +351,4 @@ module.exports = require('./lib');
 -  www.mzl.la/1dd9br6
 
 ---
-## Contact
-## Sam Couch
-### @SamuelCouch
+## @SamuelCouch
